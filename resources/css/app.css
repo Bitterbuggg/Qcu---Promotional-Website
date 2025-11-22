@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* Theme: Warm gold palette (updated) */
+@theme {
+  /* Mapping existing semantic tokens to new palette */
+  --color-ink: #FFE0A4;          /* Main page background (soft warm) */
+  --color-abyss: #FFFFFF;        /* Panels / surfaces */
+  --color-forest: #C87D0C;       /* Primary accent (darker gold) */
+  --color-gold: #F9BD4B;         /* Highlight / interactive hover */
+  --color-gold-soft: #C87D0C;    /* Secondary accent (re-using darker for softness) */
+  --color-stone: #FFE0A4;        /* Light neutral (kept similar for borders subtle) */
+  --color-parchment: #111111;    /* Text color (black-ish for readability) */
+  --font-serif: "Montserrat Alternates", "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Base styles */
+@layer base {
+  html, body { @apply bg-ink text-parchment antialiased; }
+  h1, h2, h3, h4 { @apply font-serif tracking-wide text-parchment; }
+  p, li { line-height: 1.65; }
+  a { @apply text-forest hover:text-gold transition-colors; }
+}
+
+/* Utilities */
+@layer utilities {
+  .gold-gradient { background: linear-gradient(135deg, theme('colors.forest'), theme('colors.gold')); }
+  .hero-overlay { background: radial-gradient(ellipse at center, rgba(0,0,0,0.25), rgba(0,0,0,0.85)); }
+  /* Dark mode hero button icon-only */
+  body.dark a[data-hero="cta"] {
+    padding: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0; /* hide text visually but keep accessible label */
+    position: relative;
+  }
+  body.dark a[data-hero="cta"]::before {
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    -webkit-mask: url('/images/hero-icon.svg') center / contain;
+    mask: url('/images/hero-icon.svg') center / contain; /* hero-icon.svg should exist */
+    background: theme('colors.gold');
+    display: block;
+  }
+}
+
+/* Dark mode variable overrides (apply as soon as .dark is on html to prevent flash) */
+/* Support .dark on :root/html/body for legacy consistency */
+:root.dark, html.dark, body.dark {
+  --color-ink: #070b07;          /* Darker base */
+  --color-abyss: #0f1816;        /* Card / panel */
+  --color-forest: #1d3f37;       /* Accent (raised brightness for contrast) */
+  --color-gold: #d9c26f;         /* Highlight */
+  --color-gold-soft: #c3ad60;    /* Secondary */
+  --color-stone: #26332e;        /* Borders subtle */
+  --color-parchment: #f5e7cb;    /* Body text higher contrast */
+}
+
+/* Dark mode specific readability tweaks */
+html.dark a, body.dark a { color: var(--color-gold); transition: color .2s ease; }
+html.dark a:hover, body.dark a:hover { color: var(--color-gold-soft); }
+html.dark .prose { color: var(--color-parchment); }
+html.dark .prose a { color: var(--color-gold); }
+html.dark .prose h1, html.dark .prose h2, html.dark .prose h3, html.dark .prose h4 { color: var(--color-parchment); }
+
+/* Animations (used with ScrollReveal/GSAP too) */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 800ms ease both; }
+/* Removed duplicate @theme block and extra import; sources already covered by build config */
