@@ -2,7 +2,7 @@
 
 @section('content')
   <!-- HERO SECTION -->
-    <x-hero :image="'/images/hero.svg'"
+    <x-hero :image="'/images/sakuraqcu.jpg'"
             title="Shadows in the QCU Network"
             subtitle="Glitches spread. Arius steps in to defend the campus." />
 

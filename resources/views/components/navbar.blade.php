@@ -30,10 +30,16 @@
 
         <a class="text-parchment/90 hover:text-gold" href="{{ route('news.index') }}">News & Updates</a>
         <a class="text-parchment/90 hover:text-gold" href="{{ route('team.index') }}">The Team</a>
-        <!-- Dark mode toggle -->
+        <!-- Theme toggle: JS swaps sun/moon -->
         <button type="button" id="themeToggle" class="p-2 rounded border border-forest/40 hover:border-gold transition" aria-label="Toggle dark mode">
-          <svg id="themeToggleIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a9 9 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          <svg id="themeIconDesktop" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <g class="icon-sun">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </g>
+            <g class="icon-moon hidden">
+              <path d="M12 3a9 9 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </g>
           </svg>
         </button>
       </div>
@@ -41,8 +47,14 @@
       <!-- Mobile toggle -->
       <div class="flex items-center gap-3">
         <button type="button" id="themeToggleMobile" class="lg:hidden p-2 rounded border border-forest/40 text-parchment hover:text-gold" aria-label="Toggle dark mode">
-          <svg id="themeToggleIconMobile" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a9 9 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          <svg id="themeIconMobile" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <g class="icon-sun">
+              <circle cx="12" cy="12" r="6" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </g>
+            <g class="icon-moon hidden">
+              <path d="M12 3a9 9 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </g>
           </svg>
         </button>
         <button class="lg:hidden p-2 rounded border border-forest/40 text-parchment hover:text-gold" data-toggle="mobile-menu" aria-label="Toggle Navigation">

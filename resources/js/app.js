@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       root.style.colorScheme = 'light';
     }
     localStorage.setItem('theme', mode);
+    updateThemeIcons(mode);
   }
 
   applyTheme(stored || (prefersDark ? 'dark' : 'light'));
@@ -59,6 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleTheme() {
     const next = root.classList.contains('dark') ? 'light' : 'dark';
     applyTheme(next);
+  }
+
+  function updateThemeIcons(mode) {
+    const pairs = [
+      document.getElementById('themeIconDesktop'),
+      document.getElementById('themeIconMobile')
+    ].filter(Boolean);
+    pairs.forEach(svg => {
+      const sun = svg.querySelector('.icon-sun');
+      const moon = svg.querySelector('.icon-moon');
+      if (!sun || !moon) return;
+      if (mode === 'dark') {
+        sun.classList.add('hidden');
+        moon.classList.remove('hidden');
+      } else {
+        moon.classList.add('hidden');
+        sun.classList.remove('hidden');
+      }
+    });
   }
 
   [desktopToggle, mobileToggle].filter(Boolean).forEach(btn => {
