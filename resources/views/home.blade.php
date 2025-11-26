@@ -2,9 +2,9 @@
 
 @section('content')
   <!-- Hero section -->
-    <x-hero :image="'/images/sakuraqcu.jpg'"
-            title="Shadows in the QCU Network"
-            subtitle="Glitches spread. Arius steps in to defend the campus." />
+        <x-hero :image="'/images/sakuraqcu.jpg'"
+          title="Welcome to QC LAND"
+          subtitle="Explore the realm, discover the story, and begin your journey." />
 
     <!-- Introduction -->
     <section class="py-12" aria-labelledby="introduction" data-sr="fade-in">

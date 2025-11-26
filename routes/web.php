@@ -87,9 +87,19 @@ Route::get('/news/{slug}', function (string $slug) {
 // THE TEAM (in-memory data)
 Route::get('/team', function () {
     $members = [
-        ['name' => 'Aria Nightfall', 'role' => 'Lore Keeper', 'bio' => 'Weaves the histories of QCU into living myth.', 'image' => '/images/team/aria.svg'],
-        ['name' => 'Kellan Thorne', 'role' => 'World Architect', 'bio' => 'Shapes the contours where stories take root.', 'image' => '/images/team/kellan.svg'],
-        ['name' => 'Mira Vale', 'role' => 'Artisan of Echoes', 'bio' => 'Gives faces to whispers and form to dreams.', 'image' => '/images/team/mira.svg'],
+        ['name' => 'KJ Quilatis', 'role' => 'Project Manager', 'bio' => 'Plans timelines, aligns the team, and keeps delivery on track.', 'image' => '/images/team/aria.svg'],
+        ['name' => 'Remie Salamat', 'role' => 'Developer of QCU LAND', 'bio' => 'Implements features, fixes bugs, and ensures smooth site performance.', 'image' => '/images/team/kellan.svg'],
+        ['name' => 'Luis Troy Paraiso', 'role' => 'Developer of QCU LAND', 'bio' => 'Builds components, optimizes code, and supports deployments.', 'image' => '/images/team/mira.svg'],
+        ['name' => 'Peter John I. Varca', 'role' => 'Developer of QCU LAND', 'bio' => 'Supported game development and assets, and managed the promotional website.', 'image' => '/images/team/aria.svg'],
+        ['name' => 'Rayn Amberdawn', 'role' => 'UI/UX Designer', 'bio' => 'Designs intuitive flows and crafts visuals for a cohesive experience.', 'image' => '/images/team/kellan.svg'],
+        ['name' => 'Stephanie Gomez', 'role' => 'UI/UX Designer', 'bio' => 'Refines layouts, typography, and accessibility for clarity and impact.', 'image' => '/images/team/mira.svg'],
+        ['name' => 'Marcho Villegas', 'role' => 'Assets / Modules', 'bio' => 'Prepares graphics and modules, ensuring assets are consistent and lightweight.', 'image' => '/images/team/aria.svg'],
+        ['name' => 'Gerald Magleo', 'role' => 'Document', 'bio' => 'Writes clear documentation and notes to keep knowledge organized.', 'image' => '/images/team/kellan.svg'],
+        ['name' => 'JB Guianan Padauan', 'role' => 'Document', 'bio' => 'Maintains guides and contributes to project records and summaries.', 'image' => '/images/team/mira.svg'],
+        ['name' => 'Angeline Mendioro', 'role' => 'Document', 'bio' => 'Compiles user guides and tracks changes across versions.', 'image' => '/images/team/aria.svg'],
+        ['name' => 'Gia Patron', 'role' => 'Document', 'bio' => 'Coordinates notes and ensures documentation stays up to date.', 'image' => '/images/team/kellan.svg'],
+        ['name' => 'Kent Tano Requiroso', 'role' => 'Document', 'bio' => 'Organizes meeting minutes and contributes to technical write‑ups.', 'image' => '/images/team/mira.svg'],
+        ['name' => 'Ryan Cristian Dela Cruz', 'role' => 'Document', 'bio' => 'Assists with documentation formatting and quality checks.', 'image' => '/images/team/aria.svg'],
     ];
     return view('team.index', compact('members'));
 })->name('team.index');

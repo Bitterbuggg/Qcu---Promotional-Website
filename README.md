@@ -81,6 +81,4 @@ Place your assets in `public/images`.
 - Tailwind breakpoints are defaults: base (0–639), sm (640+), md (768+), lg (1024+), xl (1280+), 2xl (1536+).
 - Navbar collapses on base→sm; dropdowns appear at lg+.
 
-### Backend Simplified
-This promotional site has no user accounts, queues, or dynamic database tables. User/auth models, migrations (users, cache, jobs), and factories were removed. Queue runs in `sync` mode only.
-Database config now uses an in-memory sqlite connection (`:memory:`). You can safely ignore `php artisan migrate` commands.
+
