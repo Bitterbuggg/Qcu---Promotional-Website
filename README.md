@@ -83,4 +83,4 @@ Place your assets in `public/images`.
 
 ### Backend Simplified
 This promotional site has no user accounts, queues, or dynamic database tables. User/auth models, migrations (users, cache, jobs), and factories were removed. Queue runs in `sync` mode only.
-Database config now uses an in-memory sqlite connection (`:memory:`). You can safely ignore `php artisan migrate` commands. 
+Database config now uses an in-memory sqlite connection (`:memory:`). You can safely ignore `php artisan migrate` commands.
