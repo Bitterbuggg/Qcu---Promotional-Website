@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- THE TEAM / ABOUT US -->
+  <!-- The team -->
   <section class="py-12" aria-labelledby="the-team">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h1 id="the-team" class="text-3xl sm:text-4xl font-serif text-parchment">The Team</h1>

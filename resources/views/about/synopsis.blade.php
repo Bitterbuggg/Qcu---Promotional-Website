@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- GAME SYNOPSIS -->
+  <!-- Game synopsis -->
   <section class="py-12" aria-labelledby="game-synopsis">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <h1 id="game-synopsis" class="text-3xl sm:text-4xl font-serif text-parchment">Game Synopsis</h1>

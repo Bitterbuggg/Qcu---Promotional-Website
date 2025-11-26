@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- GAME HYPERLINK -->
+  <!-- Game link -->
   <section class="py-12" aria-labelledby="game-link">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
       <h1 id="game-link" class="text-3xl sm:text-4xl font-serif text-parchment">Play the Game</h1>

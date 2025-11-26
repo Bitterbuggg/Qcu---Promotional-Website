@@ -6,10 +6,10 @@
     <title>{{ $title ?? 'QCU LAND — A Dark Fantasy Journey' }}</title>
     <meta name="description" content="QCU LAND: An epic dark fantasy world with rich lore, deep gameplay, and evolving stories.">
 
-    <!-- Early theme application to avoid light-mode flash -->
+    <!-- Apply theme early to avoid light-mode flash -->
     <script>/*<![CDATA[*/(function(){try{var m=localStorage.getItem('theme');if(!m){m=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(m==='dark'){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}else{document.documentElement.style.colorScheme='light';}}catch(e){}})();/*]]>*/</script>
 
-    <!-- Fonts: Montserrat (single family for headings & body) -->
+    <!-- Fonts: Montserrat families for headings and body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat+Alternates:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,6 +25,6 @@
     </main>
 
     <x-footer />
-    <!-- Note: Place your sitemap image at /public/images/sitemap.png if needed in pages -->
+    <!-- Optional: add /images/sitemap.png if used on pages -->
 </body>
 </html>

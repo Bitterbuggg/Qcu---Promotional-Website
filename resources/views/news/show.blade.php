@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- ANNOUNCEMENT DETAIL (OPTIONAL) -->
+  <!-- Announcement detail (optional) -->
   <section class="py-12" aria-labelledby="announcement">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <h1 id="announcement" class="text-3xl sm:text-4xl font-serif text-parchment">{{ $announcement['title'] ?? 'Announcement' }}</h1>

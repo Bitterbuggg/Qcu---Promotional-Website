@@ -5,7 +5,7 @@
   'image' => '/images/sakuraqcu.jpg',
 ])
 
-<!-- HERO SECTION -->
+<!-- Hero section -->
 <section class="relative min-h-[68vh] grid place-items-center overflow-hidden">
   <img src="{{ $image }}" alt="Hero background" class="absolute inset-0 w-full h-full object-cover object-[50%_15%] md:object-[50%_20%] opacity-60" />
   <div class="absolute inset-0 hero-overlay"></div>

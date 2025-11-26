@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- HERO SECTION -->
+  <!-- Hero section -->
     <x-hero :image="'/images/sakuraqcu.jpg'"
             title="Shadows in the QCU Network"
             subtitle="Glitches spread. Arius steps in to defend the campus." />
 
-    <!-- INTRODUCTION NARRATIVE -->
+    <!-- Introduction -->
     <section class="py-12" aria-labelledby="introduction" data-sr="fade-in">
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <h2 id="introduction" class="font-serif text-2xl text-parchment mb-4">Introduction</h2>
@@ -15,7 +15,7 @@
       </div>
     </section>
 
-  <!-- QUICK LINKS -->
+  <!-- Quick links -->
   <section class="py-12" aria-labelledby="quick-links">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h2 id="quick-links" class="sr-only">Quick Links</h2>
