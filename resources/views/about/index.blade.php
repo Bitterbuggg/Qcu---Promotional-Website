@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- ABOUT OVERVIEW -->
+  <!-- About overview -->
   <section class="py-12" aria-labelledby="about-overview">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <header class="mb-6">

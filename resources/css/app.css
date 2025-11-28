@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 
-/* Theme: Warm gold palette (updated) */
+/* Theme: Warm gold palette */
 @theme {
   /* Mapping existing semantic tokens to new palette */
   --color-ink: #FFE0A4;          /* Main page background (soft warm) */
@@ -28,7 +28,7 @@
 @layer utilities {
   .gold-gradient { background: linear-gradient(135deg, theme('colors.forest'), theme('colors.gold')); }
   .hero-overlay { background: radial-gradient(ellipse at center, rgba(0,0,0,0.25), rgba(0,0,0,0.85)); }
-  /* Removed icon-only override so CTA text remains visible in dark mode */
+  /* Hero CTA displays text in dark mode */
 }
 
 /* Dark mode variable overrides (apply as soon as .dark is on html to prevent flash) */
@@ -50,10 +50,10 @@ html.dark .prose { color: var(--color-parchment); }
 html.dark .prose a { color: var(--color-gold); }
 html.dark .prose h1, html.dark .prose h2, html.dark .prose h3, html.dark .prose h4 { color: var(--color-parchment); }
 
-/* Animations (used with ScrollReveal/GSAP too) */
+/* Animations (paired with ScrollReveal/GSAP where used) */
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in-up { animation: fade-in-up 800ms ease both; }
-/* Removed duplicate @theme block and extra import; sources already covered by build config */
+/* Single @theme block; imports handled by Vite build */

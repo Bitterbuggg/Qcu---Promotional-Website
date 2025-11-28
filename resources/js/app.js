@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
 });
 
-// Defer optional libraries; avoid top-level await for production build compatibility.
+// Load optional libs dynamically; avoid top-level await for build compatibility.
 function initScrollReveal() {
   import('scrollreveal').then(mod => {
     const sr = mod.default();
@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
   initGsapHero();
 });
 
-// Theme toggle (dark / light) using body class and localStorage
+// Theme toggle using html/body 'dark' class and localStorage
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
   const body = document.body;

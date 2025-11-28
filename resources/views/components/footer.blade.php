@@ -3,7 +3,7 @@
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-parchment text-sm">© {{ date('Y') }} QCU. All rights reserved.</p>
       <div class="flex items-center gap-4">
-        <a href="#" aria-label="Twitter" class="hover:text-gold">Twitter</a>
+        <a href="#" aria-label="X (formerly Twitter)" class="hover:text-gold">X</a>
         <a href="#" aria-label="YouTube" class="hover:text-gold">YouTube</a>
         <a href="#" aria-label="Facebook" class="hover:text-gold">Facebook</a>
         <a href="#" aria-label="Instagram" class="hover:text-gold">Instagram</a>

@@ -11,7 +11,7 @@ class RoutesSmokeTest extends TestCase
     {
         $this->get(route('home'))
             ->assertOk()
-            ->assertSee('Shadows in the QCU Network');
+            ->assertSee('Welcome to QC LAND');
     }
 
     /** @test */
